@@ -1213,7 +1213,7 @@ terminal_profile_class_init (TerminalProfileClass *klass)
   GParamSpec *pspec = propSpec;\
   g_object_class_install_property (object_class, propId, pspec);\
 \
-  if (propGSettings)\
+  if (propGSettings != NULL)\
     {\
       g_param_spec_set_qdata (pspec, gsettings_key_quark, (gpointer) propGSettings);\
       g_hash_table_insert (klass->gsettings_keys, (gpointer) propGSettings, pspec);\
