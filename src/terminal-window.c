@@ -108,7 +108,7 @@ struct _TerminalWindowPrivate
 
     /* Workaround until gtk+ bug #535557 is fixed */
     guint icon_title_set : 1;
-    time_t focus_time;
+    gint64 focus_time;
 
     /* should we copy selection to clibpoard */
     int copy_selection;
@@ -2433,7 +2433,7 @@ terminal_window_focus_in_event (GtkWidget *widget,
   TerminalWindowPrivate *priv = window->priv;
 
   if (event->in)
-    priv->focus_time = time(NULL);
+    priv->focus_time = g_get_real_time () / G_USEC_PER_SEC;
 
   return FALSE;
 }
