@@ -346,6 +346,10 @@ terminal_screen_init (TerminalScreen *screen)
 
 	priv = screen->priv = terminal_screen_get_instance_private (screen);
 
+	//TODO: If TERMINAL_PROFILE_EXIT_ACTION is TERMINAL_EXIT_CLOSE, use 0,
+	//otherwise use 2.
+	vte_terminal_set_eos_dwell_time (VTE_TERMINAL (screen), 1);
+
 	vte_terminal_set_mouse_autohide (VTE_TERMINAL (screen), TRUE);
 #if VTE_CHECK_VERSION (0, 52, 0)
 	vte_terminal_set_bold_is_bright (VTE_TERMINAL (screen), TRUE);
