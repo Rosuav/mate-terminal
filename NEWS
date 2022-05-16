@@ -3,6 +3,10 @@
   * Hacks to toy with building and debugging. Don't use this version.
     This is not an official Mate build; if I could adorn the version
     number to say this, I would do so.
+  * PKG_CONFIG_PATH=/home/rosuav/tmp/mate-terminal/lib/x86_64-linux-gnu/pkgconfig \
+      ./autogen.sh --prefix=/home/rosuav/tmp/mate-terminal --sysconfdir=/etc \
+      --disable-static --localstatedir=/var --with-gnu-ld
+  * LD_LIBRARY_PATH=/home/rosuav/tmp/mate-terminal/lib/x86_64-linux-gnu src/mate-terminal
 
 ### mate-terminal 1.26.0
 
