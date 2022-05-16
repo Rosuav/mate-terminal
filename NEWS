@@ -1,3 +1,9 @@
+### mate-terminal 1.26.1
+
+  * Hacks to toy with building and debugging. Don't use this version.
+    This is not an official Mate build; if I could adorn the version
+    number to say this, I would do so.
+
 ### mate-terminal 1.26.0
 
   * Translations update
